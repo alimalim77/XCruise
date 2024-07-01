@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+}
+
+.navbar {
+  align-items: center;
+  background-color: rgb(0, 0, 51);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar > * {
+  padding: 0.5rem;
+}
+
+.menu {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: large;
+}
+
+.menu > a {
+  padding: 0.2rem;
+}
+
+.hero {
+  align-items: center;
+  background-image: url("https://github.com/Mohak-Trivedi/xCruise/blob/main/assests/hero-cruise.png?raw=true");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+}
+
+.hero > h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.hero > button {
+  background-color: tomato;
+  border-radius: 0.5rem;
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.inner-discover {
+  border-left: 0.6rem solid yellow;
+  margin-left: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.cards {
+  margin-left: 0.6rem;
+  margin-top: 0.4rem;
+}
+.heading {
+  padding-left: 1rem;
+}
+
+.heading > h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-bottom: 0.5rem;
+}
+
+.popular {
+  align-items: center;
+  display: flex;
+  padding-left: 0;
+  padding: 1rem;
+}
+
+.popular > div {
+  padding: 0.5rem 0.5rem;
+}
+
+.pills {
+  border-radius: 2rem;
+  border: 3px solid rgb(238, 238, 238);
+  box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-right: 0.5rem;
+}
+
+.pills > div {
+  display: flex;
+  align-items: center;
+}
+
+.pills img {
+  height: 1.5rem;
+  object-fit: cover;
+  width: 1.5rem;
+  border-radius: 1rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact h3 {
+  padding: 1rem;
+  border-bottom: 0.3rem solid yellow;
+}
+.contact_info {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+.contact_info > div {
+  border-radius: 1rem;
+  border: 1px solid rgb(190, 201, 192);
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.footer {
+  align-items: flex-start;
+  background-color: rgb(28, 28, 83);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-item {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-item > h3 {
+  color: gold;
+  margin: 0.8rem;
+  text-transform: uppercase;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer_rights {
+  border-top: 1px solid gray;
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card:nth-child(1) {
+    grid-column: span 4;
+  }
+
+  .card:nth-child(n + 2):nth-child(-n + 5) {
+    grid-column: span 1;
+  }
+
+  .card:nth-child(n + 6) {
+    grid-column: span 1;
+  }
+}
+
+/* Tablet view: 2 cards in a row */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    grid-column: span 1;
+  }
+}
+
+/* Mobile view: 1 card in a row */
+@media (max-width: 767px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 961px) {
+  .navbar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
